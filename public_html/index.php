@@ -13,7 +13,7 @@
         $sth->execute();
     }elseif(isset($_POST['update'])){
         $id = $_POST['id'];
-        $sth = $pdo->prepare("update todos set name = 'Update' where id = :id");
+        $sth = $pdo->prepare("update todos set name = '更新' where id = :id");
         $sth->bindValue(':id', $id, PDO::PARAM_INT);
         $sth->execute();
     }
