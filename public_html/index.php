@@ -11,6 +11,11 @@
         $sth = $pdo->prepare("delete from todos where id = :id");
         $sth->bindValue(':id', $id, PDO::PARAM_INT);
         $sth->execute();
+    }elseif(isset($_POST['update'])){
+        $id = $_POST['id'];
+        $sth = $pdo->prepare("update todos set name = '更新' where id = :id");
+        $sth->bindValue(':id', $id, PDO::PARAM_INT);
+        $sth->execute();
     }
 ?>
 
@@ -46,6 +51,13 @@
                         <button type="submit" name="delete">Delete</button>
                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
                         <input type="hidden" name="delete" value="true">
+                    </form>
+                </td>
+                <td>
+                    <form method="POST">
+                        <button type="submit" name="update">Update</button>
+                        <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                        <input type="hidden" name="update" value="true">
                     </form>
                 </td>
             </tr>
