@@ -34,7 +34,7 @@
         <input type="text" name="name" value="">
         <input type="submit" name="submit" value="Add">
     </form>
-    <h2>Current Todos</h2>
+    <h2>Current Todos </h2>
     <table class="table table-striped">
         <therad><th>Task</th><th></th></therad>
         <tbody>
