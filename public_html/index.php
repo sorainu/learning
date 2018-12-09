@@ -29,7 +29,7 @@
 </head>
 
 <body class="container">
-    <h1>Todo List</h1>
+    <h1>Todo List </h1>
     <form method="post" action="">
         <input type="text" name="name" value="">
         <input type="submit" name="submit" value="Add">
